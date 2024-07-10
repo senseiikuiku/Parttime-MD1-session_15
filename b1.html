@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 1</title>
+    </head>
+    <body>
+        <script>
+            var information = {
+                id: null,
+                name: null,
+                phone: null,
+                address: null,
+                showInfo: function () {
+                    document.write(
+                        `${this.id} <br> ${this.name} <br> ${this.phone} <br> ${this.address}`
+                    );
+                },
+            };
+
+            information.id = prompt("Nhập vào ID: ");
+            information.name = prompt("Nhập vào Name: ");
+            information.phone = prompt("Nhập vào số điện thoại: ");
+            information.address = prompt("Nhập vào địa chỉ: ");
+
+            information.showInfo();
+        </script>
+    </body>
+</html>

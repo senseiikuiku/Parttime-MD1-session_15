@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demo</title>
+    </head>
+    <body>
+        <script>
+            var courses = [
+                { code: "RA01", name: "Khóa học 1", time: 1000, status: true },
+                { code: "RA02", name: "Khóa học 2", time: 2000, status: false },
+                { code: "RA03", name: "Khóa học 3", time: 3000, status: true },
+            ];
+            var stt = 1;
+            var str = "";
+            for (const object of courses) {
+                str += `<tr>
+                            <td>${stt++}</td>
+                            <td>${object.code}</td>
+                            <td>${object.name}</td>
+                            <td>${object.time}</td>
+                            <td>${
+                                object.status ? "Hoạt động" : "Không hoạt động"
+                            }
+                            </td>
+                            <td><a href="#!">Xóa</a></td>
+                            <td><a href="#!">Sửa</a></td>
+                        </tr>`;
+            }
+            console.log(str);
+            function render() {
+                document.write(`
+                    <table border="1px">
+                        <tr>
+                            <td>STT</td>
+                            <td>Mã khóa học</td>
+                            <td>Tên khóa học</td>
+                            <td>Thời gian</td>
+                            <td>Trạng thái</td>
+                            <td colspan="2">Hành động</td>
+                        </tr>
+                        ${str}
+                    </table>
+                `);
+            }
+            render();
+        </script>
+    </body>
+</html>

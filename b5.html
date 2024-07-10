@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 5</title>
+    </head>
+    <body>
+        <script>
+            var books = [
+                {
+                    author: "J.K. Rowling",
+                    name: "Harry Potter and the Philosopher's Stone",
+                },
+                { author: "J.R.R. Tolkien", name: "The Lord of the Rings" },
+                { author: "George Orwell", name: "1984" },
+                { author: "Harper Lee", name: "To Kill a Mockingbird" },
+            ];
+
+            var authorName = prompt("Nhập tên tác giả: ");
+            var foundBooks = books.filter(function (book) {
+                return book.author.toLowerCase() === authorName.toLowerCase();
+            });
+
+            console.log(foundBooks)
+
+            if (foundBooks.length > 0) {
+                document.write("<h3>Sách tìm thấy!</h2>");
+                for (var i = 0; i < foundBooks.length; ++i)
+                    document.write(
+                        "Tác giả: " +
+                            foundBooks[i].author +
+                            ", tên sách: " +
+                            foundBooks[i].name +
+                            "<br>"
+                    );
+            }else
+                document.write("Không tìm thấy sách")
+        </script>
+    </body>
+</html>

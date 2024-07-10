@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 3</title>
+    </head>
+    <body>
+        <script>
+            var n = parseInt(prompt("Nhập số sinh viên: "));
+            var id = 0;
+            var sv = [];
+            for (var i = 0; i < n; ++i) {
+                id++;
+                var name = prompt("Nhập tên sinh viên: ");
+                sv.push({ id: id, name: name });
+            }
+            var str = "";
+            document.write("<h3>Danh sách sinh viên!</h3>");
+            for (var i = 0; i < sv.length; i++)
+                str += "<li>ID: " + sv[i].id + ", Name: " + sv[i].name + "</li>";
+            document.write(`<ul>${str}</ul`);
+        </script>
+    </body>
+</html>

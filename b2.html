@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 2</title>
+    </head>
+    <body>
+        <script>
+            var information = {
+                id: 1,
+                name: "Nguyen Van A",
+                phone: "0123456789",
+                address: "123 Đường ABC, Phường XYZ",
+            };
+            delete information.address;
+            information.email = "dduc1@gmail.com";
+            document.write("Thông sau khi cập nhật! <br>");
+            document.write("ID: " + information.id + "<br>");
+            document.write("Name: " + information.name + "<br>");
+            document.write("Phone: " + information.phone + "<br>");
+            document.write("Email: " + information.email + "<br>");
+        </script>
+    </body>
+</html>
